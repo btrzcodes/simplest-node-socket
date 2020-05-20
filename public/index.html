@@ -3,17 +3,17 @@
         <script src="/socket.io/socket.io.js"></script>
     </head>
     <body>
-        <h1>Check your console!</h1>
+        <h1>Hey, ptsch ptsch!</h1>
+        <pre>Check your console! There are secret communications on it!</pre>
         <script>
             var socket = io.connect(
                     'http://localhost:8083',
-                    {forceNew: true} // Force allways a new connection
+                    {forceNew: true} // Allways forces a new connection
                 );
 
             socket.on('message', function(data){
-                console.log(data);
+                console.log(data); // This data is the server message @ index.js thrown by .emmit
             });
-            
         </script>
     </body>
 </html>
