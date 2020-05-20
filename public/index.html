@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+    </head>
+    <body>
+        <h1>Check your console!</h1>
+        <script>
+            var socket = io.connect(
+                    'http://localhost:8083',
+                    {forceNew: true} // Force allways a new connection
+                );
+
+            socket.on('message', function(data){
+                console.log(data);
+            });
+            
+        </script>
+    </body>
+</html>
